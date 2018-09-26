@@ -18,6 +18,7 @@ tableFeb$Timestamp <- strptime(tableFeb$Time, "%d/%m/%Y %H:%M:%S")
 
 ##generate plot
 png("Plot4.png")
+par(bg=NA)
 par(mfrow=c(2,2))
 plot(tableFeb$Timestamp, tableFeb$Global_active_power, xlab="Day/Time", ylab="Global Active Power (kilowatts)", type="l")
 plot(tableFeb$Timestamp, tableFeb$Voltage, xlab="Day/Time", ylab="Voltage", type="l")

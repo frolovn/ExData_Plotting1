@@ -18,6 +18,7 @@ tableFeb$Timestamp <- strptime(tableFeb$Time, "%d/%m/%Y %H:%M:%S")
 
 ##generate plot
 png("Plot3.png")
+par(bg=NA)
 plot(tableFeb$Timestamp, tableFeb$Sub_metering_1, xlab="", ylab="Energy sub metering", type="l")
 lines(tableFeb$Timestamp, tableFeb$Sub_metering_2, xlab="", type="l", col="red")
 lines(tableFeb$Timestamp, tableFeb$Sub_metering_3, xlab="", type="l", col="blue")
